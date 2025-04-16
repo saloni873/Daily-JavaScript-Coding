@@ -1,0 +1,80 @@
+<script>
+  /*  JavaScript comma operator */
+//JavaScript uses a comma (,) to represent the comma operator. A comma operator takes two expressions, evaluates them from left to right, and returns the value of the right expression.
+
+//Here’s the syntax of the comma operator:
+
+leftExpression, rightExpression
+
+// For example:
+
+let result = (10, 10 + 20);
+console.log(result);
+
+Output:
+30
+
+// In this example, the 10, 10+20 returns the value of the right expression, which is 10+20. Therefore, the result value is 30.
+
+// See the following example:
+
+let x = 10;
+let y = (x++, x + 1);
+
+console.log(x, y);
+
+Output:
+// 11 12
+
+// In this example, we increment the value of x by one (x++), add one to x (x+1) and assign x to y. Therefore, x is 11, and y is 12 after the statement.
+
+// However, to make the code more explicit, you can use two statements rather than one statement with a comma operator like this:
+
+let a = 10;
+a++;
+let b = a + 1;
+
+console.log(a, b);
+
+// This code is more explicit.
+
+// In practice, you might want to use the comma operator inside a for loop to update multiple variables each time through the loop.
+
+// The following example uses the comma operator in a for loop to display an array of nine elements as a matrix of 3 rows and three columns:
+
+let board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let s = '';
+
+for (let i = 0, j = 1; i < board.length; i++, j++) {
+  s += board[i] + ' ';
+  if (j % 3 == 0) {
+    console.log(s);
+    s = '';
+  }
+}
+
+// Output:
+// 1 2 3
+// 4 5 6
+// 7 8 9
+
+// How it works.
+
+// First, define an array called board that stores numbers from 1 to 9, representing the board:
+// let board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Second, declare a variable and initialize its value to an empty string:
+// let s = '';
+
+// Third, declare two variables inside the loop. i for iterating over elements of board array and j is a counter that increments with each iteration:
+// for (let i = 0, j = 1; i < board.length; i++, j++)
+
+// Fourth, append each element in the board array and a space to the string s, display the s if the counter (j) is divisible by 3, and reset the string s:
+// s += board[i] + ' ';
+// if (j % 3 == 0) {
+//   console.log(s);
+//   s = '';
+// }
+
+// Finally, execute the loop body until all elements of the board array have been processed.
+</script>
